@@ -9,6 +9,7 @@ struct FBAddSpotView: View {
 
     @State private var selectedPhotoItem: PhotosPickerItem?
     @State private var selectedImage: UIImage?
+    @State private var existingImageData: Data?
     @State private var spotName: String = ""
     @State private var spotDirections: String = ""
     @State private var selectedType: SpotType?
@@ -67,6 +68,7 @@ struct FBAddSpotView: View {
                    let image = UIImage(data: data) {
                     await MainActor.run {
                         selectedImage = image
+                        existingImageData = data
                     }
                 }
             }
@@ -76,6 +78,7 @@ struct FBAddSpotView: View {
                 spotName = spot.name
                 spotDirections = spot.directions
                 selectedType = spot.type
+                existingImageData = spot.imageData
                 selectedImage = UIImage(data: spot.imageData)
             }
         }
@@ -130,6 +133,13 @@ private extension FBAddSpotView {
 
                 if let selectedImage {
                     Image(uiImage: selectedImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 140, height: 140)
+                        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+                        .clipped()
+                } else if let existingImageData, let image = UIImage(data: existingImageData) {
+                    Image(uiImage: image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 140, height: 140)
@@ -208,21 +218,26 @@ private extension FBAddSpotView {
 
     var isFormValid: Bool {
         guard
-            let selectedType,
-            let imageData = selectedImage?.jpegData(compressionQuality: 0.85),
+            selectedType != nil,
+            (selectedImage != nil || existingImageData != nil),
             !spotName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
             !spotDirections.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
         else { return false }
 
-        return !imageData.isEmpty
+        return true
     }
 
     func submit() {
-        guard
-            let selectedType,
-            let image = selectedImage,
-            let imageData = image.jpegData(compressionQuality: 0.85)
-        else { return }
+        guard let selectedType else { return }
+        
+        let finalImageData: Data?
+        if let selectedImage {
+            finalImageData = selectedImage.jpegData(compressionQuality: 0.85)
+        } else {
+            finalImageData = existingImageData
+        }
+        
+        guard let imageData = finalImageData else { return }
 
         if var existingSpot = spotToEdit {
             existingSpot.name = spotName.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -246,7 +261,6 @@ private extension FBAddSpotView {
         
         dismissKeyboard()
         dismiss()
-        isPresented = false
     }
 
     func dismissKeyboard() {

@@ -18,6 +18,7 @@ struct FBAddFeeView: View {
     @State private var isUnitMenuVisible = false
     @State private var isShowingDatePicker = false
     @State private var keyboardHeight: CGFloat = 0
+    @State private var isLoadingPhoto = false
     @FocusState private var focusedField: InputField?
     @Environment(\.dismiss) private var dismiss
 
@@ -86,7 +87,7 @@ struct FBAddFeeView: View {
                 }
                 .padding()
             }
-            .presentationDetents([.fraction(0.3)])
+            .presentationDetents([.medium, .fraction(0.4)])
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { notification in
             if let frame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
@@ -102,12 +103,45 @@ struct FBAddFeeView: View {
         }
         .onChange(of: selectedPhotoItem) { newValue in
             guard let newValue else { return }
+            isLoadingPhoto = true
             Task {
-                if let data = try? await newValue.loadTransferable(type: Data.self),
-                   let image = UIImage(data: data) {
+                do {
+                    // Try loading as Data first
+                    if let data = try await newValue.loadTransferable(type: Data.self),
+                       let image = UIImage(data: data) {
+                        await MainActor.run {
+                            selectedImage = image
+                            existingImageData = data
+                            isLoadingPhoto = false
+                        }
+                        return
+                    }
+                } catch {
+                    // Data loading failed, continue to fallback
+                }
+                
+                // Fallback: try loading as Image and convert
+                do {
+                    if let image = try await newValue.loadTransferable(type: Image.self) {
+                        await MainActor.run {
+                            // Create a renderer to convert SwiftUI Image to UIImage
+                            let renderer = ImageRenderer(content: image.resizable().frame(width: 800, height: 800))
+                            renderer.scale = UIScreen.main.scale
+                            if let uiImage = renderer.uiImage,
+                               let imageData = uiImage.jpegData(compressionQuality: 0.85) {
+                                selectedImage = uiImage
+                                existingImageData = imageData
+                            }
+                            isLoadingPhoto = false
+                        }
+                    } else {
+                        await MainActor.run {
+                            isLoadingPhoto = false
+                        }
+                    }
+                } catch {
                     await MainActor.run {
-                        selectedImage = image
-                        existingImageData = data
+                        isLoadingPhoto = false
                     }
                 }
             }
@@ -163,7 +197,11 @@ private extension FBAddFeeView {
                     .resizable(capInsets: EdgeInsets(top: 40, leading: 40, bottom: 40, trailing: 40), resizingMode: .stretch)
                     .frame(width: 160, height: 160)
 
-                if let image = selectedImage {
+                if isLoadingPhoto {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .scaleEffect(1.5)
+                } else if let image = selectedImage {
                     Image(uiImage: image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -188,6 +226,7 @@ private extension FBAddFeeView {
             .frame(maxWidth: .infinity)
         }
         .buttonStyle(.plain)
+        .disabled(isLoadingPhoto)
     }
 
     var dateField: some View {

